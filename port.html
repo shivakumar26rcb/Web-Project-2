@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="sty.css"> -->
+    <style>
+        body {
+  background-color: #000;
+  background-image: linear-gradient(to top, rgb(63, 223, 209), rgba(69, 190, 226, 0.897), rgba(22, 93, 226, 0.897),rgb(11, 11, 63)
+  );
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: large;
+  color: #d2f342;
+  padding: 10px;
+  font-weight:bolder;
+  text-transform: capitalize;
+}
+
+nav {
+  background-color: #72127a;
+  text-align: right;
+  padding: 10px;
+}
+
+.main {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #fff;
+  padding: 20px;
+  height: 600px;
+}
+
+.main img {
+  height: 400px;
+  width: 400px;
+  float: right;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-right: 130px;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.5);
+  animation: imgslide 1s linear;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
+@keyframes imgslide {
+  0% {
+    transform: translateX(100%); /* Slide from the right */
+  }
+  100% {
+    transform: translateX(0%); /* Return to the original position */
+  }
+}
+nav a:hover {
+  background-color: #fcfbf1;
+  color: black;
+}
+
+#nm,#sk {
+  text-shadow: 0px 0px 7px rgb(255, 251, 0);
+  animation: head1 2s linear infinite, headmov 2s linear ease forwards; /* Use 'forwards' to keep the final state */
+  margin-left: 100px;
+}
+
+#fsd {
+  text-shadow: 0px 0px 7px rgb(229, 255, 0);
+  animation: head1 2s linear infinite,, headmov 2s linear ease forwards;
+  margin-left:100px;
+}
+
+/* Rest of your CSS code */
+
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes head1 {
+  0% {
+    text-shadow: 2px;
+  }
+  20% {
+    text-shadow: 0px 0px 10px yellow;
+  }
+  60% {
+    text-shadow: 0px 0px 15px yellow;
+  }
+  80% {
+    text-shadow: 0px 0px 10px yellow;
+  }
+  100% {
+    text-shadow: 0px 0px 2px yellow;
+  }
+}
+@keyframes headmov {
+  0% {
+    
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-50%);
+  }
+  60% {
+    transform: translateX(50%);
+  }
+  80% {
+    transform: translateX(50%);
+
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+.main h1 {
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  padding-left: 70px;
+}
+
+.main h3 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  padding-left: 60px;
+}
+
+.resume,
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.resume {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #555;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.contact a {
+  color: #fff;
+}
+
+.about p {
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Additional Styles */
+.progress-bar {
+  width: 90%;
+  height: 30px;
+  background-color: #ccb9b9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  margin-left: 50px;
+
+}
+
+.progress {
+  height: 100%;
+  background-color: #ab22eb;
+  width: 0%;
+  transition: width 1s ease-in-out;
+  border-radius: 5px;
+  padding-left: 20px;
+  
+
+}
+
+.skill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #050505ef;
+  font-weight: bold;
+  margin-left: 50px;
+
+}
+
+/* Animation */
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+}
+
+.progress-bar .progress {
+  animation: progressAnimation 1s ease-in-out forwards;
+}
+
+/* Add animation delay for each progress bar */
+.progress-bar:nth-child(1) .progress {
+  animation-delay: 0.2s;
+}
+
+.progress-bar:nth-child(2) .progress {
+  animation-delay: 0.4s;
+}
+
+.progress-bar:nth-child(3) .progress {
+  animation-delay: 0.6s;
+}
+
+.progress-bar:nth-child(4) .progress {
+  animation-delay: 0.8s;
+}
+
+.progress-bar:nth-child(5) .progress {
+  animation-delay: 1s;
+}
+
+.progress-bar:nth-child(6) .progress {
+  animation-delay: 1.2s;
+}
+
+.progress-bar:nth-child(7) .progress {
+  animation-delay: 1.4s;
+}
+.about {
+  padding: 20px;
+}
+
+.resume .res {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contact .num,
+.contact .mail,
+.contact .linked {
+  display: block; /* Change from inline-block to block */
+  margin-bottom: 10px;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.about,
+.resume,
+.contact {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Additional Content */
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.about {
+  border: 1px solid transparent; /* Set border to transparent */
+  animation: borderGlow 2s infinite; /* Apply animation */
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0px 0px 5px yellow;
+  }
+  50% {
+    box-shadow: 0px 0px 20px yellow;
+  }
+  100% {
+    box-shadow: 0px 0px 5px yellow;
+  }
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-right: 20px;
+}
+
+.resume a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resume a:hover {
+  background-color: #e5ff00;
+  color: black;
+}
+
+.contact span {
+  font-size: 1.2rem;
+}
+
+p {
+  color: #fff;
+  font-size: 10px;
+  text-align: justify;
+  line-height:3px;
+}
+
+.secimg {
+  float: left;
+  height: 330px;
+  width: 300px;
+  margin-right: 30px;
+}
+
+
+  
+
+
+.contact h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact h1.num, .contact h1.mail, .contact h1.linkedin {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.contact h1 b {
+  color: #f1dc1f;
+  font-weight: bold;
+}
+
+.contact a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f1dc1f;
+  color: #000;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact a:hover {
+  background-color: #000;
+  color: #f1dc1f;
+}
+
+.contact p {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.contact span {
+  font-size: 1.2rem;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">home</a>
+        <a href="#ab">about</a>
+        <a href="#sk">skills</a>
+        <a href="#resu">CV</a>
+        <a href="#con">contact me</a>
+    </nav>
+    <div class="main">
+      <!-- place your image here -->
+        <img src="IMG20220628130941.jpg" alt="" id="myimg">
+        <h1 id="fsd" >Web Developer</h1>
+        <h3 id="nm">Shivakumara S</h3>
+    </div>
+    <div class="about" id="ab">
+        <h1 id="sk" style="color:white;padding-left:40px;text-decoration:underline">about</h1>
+        <img src="background.jpg.jpg" alt="" class="secimg">
+        
+        <p>I am a Full-stack enthusiast currently pursuing a degree in Information Science and Engineering at Maharaja Institute of Technology, Mysore. I'm currently in my 3rd year of engineering and have been building a strong foundation in various aspects of technology. My skills encompass a wide range of programming languages and web technologies, including HTML, CSS, JavaScript, SQL, Java, and Python. <br>
+
+            My journey in the field of Information Science and Engineering has been both inspiring and educational. At Maharaja Institute of Technology, I've had the privilege of learning from experienced professors and collaborating with motivated peers. This environment has provided me with valuable insights into the dynamic world of technology. <br>
+            
+             I firmly believe that an internship opportunity would be the ideal platform for me to apply my expertise in real-world scenarios and to continue learning from experienced professionals in the industry. <br>
+            
+            As I progress in my 3rd year of engineering, I am excited to take on new challenges and opportunities that will further enhance my capabilities as a full-stack developer. My educational journey, combined with a strong determination to keep up with the latest trends in technology, makes me well-prepared for the ever-evolving world of Information Science.
+            
+            
+            
+            
+            
+            
+            
+            </p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <!-- skills bedde idre tegi -->
+    <div class="skills">
+      <h1 id="sk"style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight:bolder;text-decoration: underline;color:white;padding-left: 30px;"> skills</h1>
+      <div class="progress-bar">
+        <div class="progress" style="width: 90%;"></div>
+        <span class="skill">HTML 90%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 75%;"></div>
+        <span class="skill">CSS 75%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 70%;"></div>
+        <span class="skill">JavaScript 70%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 75%;"></div>
+        <span class="skill">C 75%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 50%;"></div>
+        <span class="skill">Java 50%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 50%;"></div>
+        <span class="skill">Python 50%</span>
+      </div>
+      
+      
+    </div>
+    <div class="resume" id="resu">
+        <span class="res" style="color:yellow;">Click to download the resume&nbsp;&nbsp;</span>
+        <a href="res.jpeg" target="_blank" download>Download File</a>
+    </div>
+    <div class="contact">
+        <h1 id="con" style="color:white;padding-right:30px;">Contact:</h1>
+
+        <h1 class="num"><b>phno.:</b>9611184092&nbsp;&nbsp;</h1>
+        <h1 class="mail"><b>email:</b>shivu26kumar@gmail.com&nbsp;&nbsp;</h1>
+        <h1 class="linkedin"><b>linked in:</b>Shivakumara S</h1>   
+    </div>
+    <footer>
+        <span>copyright&copy;Shivakumara S</span>
+    </footer>
+    
+</body>
+</html>
